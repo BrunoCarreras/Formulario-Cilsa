@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <link rel="stylesheet" href="script.js">
     <main class="datosPersonales">
         <form action="">
             <h1>Datos Personales</h1>
@@ -28,11 +29,17 @@
             </label>
             </fieldset>
         </form>
+        <button class="toggle-button" onclick="toggleBackground()">Cambiar Fondo Oscuro</button>
+        <script>
+            function toggleBackground() {
+                document.body.classList.toggle('oscuro-mode');
+            }
+        </script>
         
     </main>
 
     <footer>
-        
+
     </footer>
 </body>
 </html>

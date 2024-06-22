@@ -1,5 +1,4 @@
 *{
-    background-color: rgb(253, 241, 222);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -21,4 +20,15 @@
     border-radius: 10px;
     border: 3px solid #000000;
     box-shadow: 0 0 10px;
+}
+body.oscuro-mode {
+    background-color: #1a1616; 
+    color: #b7fd45; 
+    transition: background-color 0.5s, color 0.5s;
+}
+.toggle-button {
+    margin-top: 20px;
+    padding: 20px 50px;
+    font-size: 16px;
+    cursor: pointer;
 }
