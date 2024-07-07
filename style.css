@@ -3,9 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    background-color: bisque;
+    transition: background-color 0.5s;
+}
 .datosPersonales{
     width: 100%;
-    height: 100%;
+    height: 500px;
     display: grid;
     justify-items: center;
     padding-top: 50px;
@@ -23,10 +28,10 @@
 }
 body.oscuro-mode {
     background-color: #1a1616; 
-    color: #b7fd45; 
+    color: #abd16d; 
     transition: background-color 0.5s, color 0.5s;
 }
-.toggle-button {
+.boton {
     margin-top: 20px;
     padding: 20px 50px;
     font-size: 16px;

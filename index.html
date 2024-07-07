@@ -6,30 +6,39 @@
     <title>Formulario</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="body">
+    <script src="./script.js"></script>
     <link rel="stylesheet" href="script.js">
     <main class="datosPersonales">
         <form action="">
             <h1>Datos Personales</h1>
             <fieldset class="formulario">
                 <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" placeholder="Ingresa tu nombre" required>
+                <input type="text" name="nombre" placeholder="Ingresa tu nombre" required>
                 </label>
                 <label for="Apellido">Apellido:</label>
-                <input type="text" id="celular" placeholder="Ingresa tu apellido" required>
+                <input type="text" name="celular" placeholder="Ingresa tu apellido" required>
                 </label>
                 <label for="email">Email:</label>
                 <input type="email" id="email" placeholder="Ingresa tu Email" required>
                 </label>
-                <label for="pais de residencia">Pais de residencia:</label>
-                <input type="text" id="text" placeholder="Ingresa tu pais de residencia" required>
                 <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
                 <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
+                <label for="pais de residencia">Pais de residencia:</label>
+                <select id="pais" required>
+                    <option value="">Seleccione su país</option>
+                    <option value="argentina">Argentina</option>
+                    <option value="brasil">Brasil</option>
+                    <option value="chile">Chile</option>
+                    <option value="colombia">Colombia</option>
+                    <option value="mexico">México</option>
+                    <option value="peru">Perú</option>
+                    <option value="espana">España</option>
             <input type="submit" value="Enviar">
             </label>
             </fieldset>
         </form>
-        <button class="toggle-button" onclick="toggleBackground()">Cambiar Fondo Oscuro</button>
+        <button class="boton" onclick="toggleBackground()">Cambiar Fondo Oscuro</button>
         <script>
             function toggleBackground() {
                 document.body.classList.toggle('oscuro-mode');
