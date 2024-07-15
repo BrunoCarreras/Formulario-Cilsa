@@ -10,17 +10,26 @@
 </head>
 <body class="body">
     <main class="datosPersonales">
-        <form action="">
+        <form id="formulario" class="needs-validation">
             <h1>Datos Personales</h1>
             <fieldset class="formulario">
                 <label for="nombre">Nombre:</label>
-                <input type="text" name="nombre" placeholder="Ingresa tu nombre" required>
+                <input type="text" id="nombre" class="form-control" placeholder="Ingresa tu nombre">
+                <div class="invalid-feedback">
+                    Por favor, ingresa tu nombre.
+                </div>
                 <label for="apellido">Apellido:</label>
-                <input type="text" name="apellido" placeholder="Ingresa tu apellido" required>
+                <input type="text" id="apellido" placeholder="Ingresa tu apellido">
+                <div class="invalid-feedback">
+                    Por favor, ingresa tu apellido.
+                </div>
                 <label for="email">Email:</label>
-                <input type="email" id="email" placeholder="Ingresa tu Email" required>
+                <input type="email" id="email" placeholder="Ingresa tu Email">
+                <div class="invalid-feedback">
+                    Por favor, ingresa tu email.
+                </div>
                 <label for="pais">Pais de residencia:</label>
-                <select id="pais" required>
+                <select id="pais">
                     <option value="">Seleccione su país</option>
                     <option value="argentina">Argentina</option>
                     <option value="brasil">Brasil</option>
@@ -31,17 +40,43 @@
                     <option value="espana">España</option>
                     <option value="estados-unidos">Estados Unidos</option>
                 </select>
+                <div class="invalid-feedback">
+                    Por favor, ingresa tu pais de residencia.
+                </div>
                 <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
-                <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
+                <input type="date" id="fecha-nacimiento" name="fecha-nacimiento">
+                <div class="invalid-feedback">
+                    Por favor, ingresa tu fecha de nacimiento.
+                </div>
                 <input type="submit" value="Enviar">
             </fieldset>
         </form>
         <button class="boton" onclick="toggleBackground()">Cambiar Modo Sensible</button>
     </main>
-    <script>
+<script>
         function toggleBackground() {
             document.body.classList.toggle('oscuro-mode');
         }
-    </script>
+    document.getElementById('formulario').addEventListener('submit', function(event) {
+    event.preventDefault();
+    var form = event.target;
+    var inputs = form.querySelectorAll('input, select');
+    var valid = true;
+
+    inputs.forEach(function(input) {
+        if (!input.value) {
+            input.classList.add('is-invalid');
+            input.nextElementSibling.style.display = 'block';
+            valid = false;
+        }
+    });
+
+    if (valid) {
+        form.submit();
+    } else {
+        alert('Por favor, complete todos los campos requeridos.');
+    }
+});
+</script>
 </body>
 </html>

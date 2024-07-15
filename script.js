@@ -1,21 +1,30 @@
-(function() {
-    'use strict';
-    window.addEventListener('load', function() {
-        // Obtener todos los formularios a los que queremos aplicar estilos de validación personalizados
-        var forms = document.getElementsByClassName('needs-validation');
-        // Bucle sobre ellos y evitar el envío
-        var validation = Array.prototype.filter.call(forms, function(form) {
-            form.addEventListener('submit', function(event) {
-                if (form.checkValidity() === false) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                }
-                form.classList.add('was-validated');
-            }, false);
-        });
-    }, false);
-})();
 
 function toggleBackground() {
     document.body.classList.toggle('oscuro-mode');
 }
+
+
+document.getElementById('formulario').addEventListener('submit', function(event) {
+    event.preventDefault();
+    var form = event.target;
+    var inputs = form.querySelectorAll('input, select');
+    var valid = true;
+
+    inputs.forEach(function(input) {
+        if (!input.value) {
+            input.classList.add('is-invalid');
+            input.nextElementSibling.style.display = 'block';
+            valid = false;
+        } else {
+            input.classList.remove('is-invalid');
+            input.nextElementSibling.style.display = 'none';
+        }
+    });
+
+    if (valid) {
+        // Aquí puedes enviar el formulario usando AJAX o cualquier otra lógica
+        alert('Formulario enviado correctamente');
+    } else {
+        alert('Por favor, complete todos los campos requeridos.');
+    }
+});
