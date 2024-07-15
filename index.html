@@ -1,30 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Formulario de Datos Personales</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./script.js">
 </head>
 <body class="body">
-    <script src="./script.js"></script>
-    <link rel="stylesheet" href="script.js">
     <main class="datosPersonales">
         <form action="">
             <h1>Datos Personales</h1>
             <fieldset class="formulario">
                 <label for="nombre">Nombre:</label>
                 <input type="text" name="nombre" placeholder="Ingresa tu nombre" required>
-                </label>
-                <label for="Apellido">Apellido:</label>
-                <input type="text" name="celular" placeholder="Ingresa tu apellido" required>
-                </label>
+                <label for="apellido">Apellido:</label>
+                <input type="text" name="apellido" placeholder="Ingresa tu apellido" required>
                 <label for="email">Email:</label>
                 <input type="email" id="email" placeholder="Ingresa tu Email" required>
-                </label>
-                <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
-                <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
-                <label for="pais de residencia">Pais de residencia:</label>
+                <label for="pais">Pais de residencia:</label>
                 <select id="pais" required>
                     <option value="">Seleccione su país</option>
                     <option value="argentina">Argentina</option>
@@ -34,21 +29,19 @@
                     <option value="mexico">México</option>
                     <option value="peru">Perú</option>
                     <option value="espana">España</option>
-            <input type="submit" value="Enviar">
-            </label>
+                    <option value="estados-unidos">Estados Unidos</option>
+                </select>
+                <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
+                <input type="submit" value="Enviar">
             </fieldset>
         </form>
-        <button class="boton" onclick="toggleBackground()">Cambiar Fondo Oscuro</button>
-        <script>
-            function toggleBackground() {
-                document.body.classList.toggle('oscuro-mode');
-            }
-        </script>
-        
+        <button class="boton" onclick="toggleBackground()">Cambiar Modo Sensible</button>
     </main>
-
-    <footer>
-
-    </footer>
+    <script>
+        function toggleBackground() {
+            document.body.classList.toggle('oscuro-mode');
+        }
+    </script>
 </body>
 </html>
