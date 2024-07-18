@@ -55,6 +55,14 @@
     background-color: #000000;
 }
 
+.logo{
+    height: 55px;
+    border-radius: 8px;
+    border: 5px solid black;
+}
+a{
+    color: black;
+}
 @media (max-width: 768px){
     .body{
         background-color: lightpink;
@@ -66,10 +74,12 @@
         background-color: lightblue;
     }
     .formulario input{
-        margin-left: 110px;
+        margin-left: 10px;
     }
     .boton{
         margin-left: 80px;
         border-radius: 10px;
     }
 }
+
+
