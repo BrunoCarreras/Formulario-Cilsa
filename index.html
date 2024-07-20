@@ -1,18 +1,64 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Datos Personales</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Inicio</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./script.js">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="body">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-lg">
+        <a class="navbar-brand" > <img class="logo" src="../img/logo.jpg" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Inicio <span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Perfil
+                        
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#formulario">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Inicio</h1>
+    <p style="margin-bottom: 1000px;">Si scrolleas aparece el boton abajo a la izquierda. Si clickeas en Contacto te lleva al Formulario.
+    </p>
+    </div>
+    <button onclick="subir()" id="botonArriba" title="Go to top">↑</button>
+    <script>
+        var mybutton = document.getElementById("botonArriba");
+        window.onscroll = function() {
+            scroll();
+        };
+    
+        function scroll() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+    
+        function subir() {
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
     <main class="datosPersonales">
         <form id="formulario" class="needs-validation">
-            <h1>Datos Personales</h1> 
-                <a href="./pages/inicio.html">Inicio</a>
+            <h1>¡Contactanos!</h1> 
             <fieldset class="formulario">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" class="form-control" placeholder="Ingresa tu nombre">
@@ -52,10 +98,11 @@
                 <input type="submit" value="Enviar">
             </fieldset>
         </form>
-        <button class="boton" onclick="toggleBackground()">Cambiar Modo Sensible</button>
+        <button class="boton" onclick="botonCambia()">Cambiar Modo Sensible</button>
     </main>
+
 <script>
-        function toggleBackground() {
+        function botonCambia() {
             document.body.classList.toggle('oscuro-mode');
         }
     document.getElementById('formulario').addEventListener('submit', function(event) {
@@ -78,6 +125,15 @@
         alert('Por favor, complete todos los campos requeridos.');
     }
 });
+
 </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
+<footer>
+
+</footer>
 </html>

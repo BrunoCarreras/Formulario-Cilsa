@@ -22,7 +22,6 @@ document.getElementById('formulario').addEventListener('submit', function(event)
     });
 
     if (valid) {
-        // Aquí puedes enviar el formulario usando AJAX o cualquier otra lógica
         alert('Formulario enviado correctamente');
     } else {
         alert('Por favor, complete todos los campos requeridos.');
