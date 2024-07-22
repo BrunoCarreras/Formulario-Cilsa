@@ -33,28 +33,32 @@
 
     <div class="container">
         <h1>Inicio</h1>
-    <p style="margin-bottom: 1000px;">Si scrolleas aparece el boton abajo a la izquierda. Si clickeas en Contacto te lleva al Formulario.
+    <p style="margin-bottom: 200px;">Si scrolleas aparece el boton abajo a la izquierda. Si clickeas en Contacto te lleva al Formulario.
     </p>
     </div>
-    <button onclick="subir()" id="botonArriba" title="Go to top">↑</button>
-    <script>
-        var mybutton = document.getElementById("botonArriba");
-        window.onscroll = function() {
-            scroll();
-        };
-    
-        function scroll() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                mybutton.style.display = "block";
-            } else {
-                mybutton.style.display = "none";
-            }
-        }
-    
-        function subir() {
-            document.documentElement.scrollTop = 0;
-        }
-    </script>
+
+<section class="cards">
+    <div class="fotos">
+        <h2>BRUNO</h2>
+        <div class="foto">
+            <img src="./img/foto1.jpg" alt="">
+        </div>
+        <p>Hola!, mi nombre es Bruno.
+            Soy una persona proactiva, dispuesta a aprender y mejorar mis habilidades
+            tengo conocimiento sobre HTML5, CSS3, JS, Boostrap y Diseño UX.
+        </p>
+    </div>
+    <div class="fotos">
+        <h2>ALEJANDRA</h2>
+        <div class="foto">
+            <img src="./img/foto2.avif" alt="">
+        </div>
+        <p>Hola!, mi nombre es Alejandra.
+            Soy una persona proactiva, dispuesta a aprender y mejorar mis habilidades
+            tengo conocimiento sobre HTML5, CSS3, JS, Boostrap y Diseño UX.
+        </p>
+    </div>
+</section>
 
     <main class="datosPersonales">
         <form id="formulario" class="needs-validation">
@@ -101,6 +105,26 @@
         <button class="boton" onclick="botonCambia()">Cambiar Modo Sensible</button>
     </main>
 
+    <button onclick="subir()" id="botonArriba" title="Go to top">↑</button>
+    <script>
+        var mybutton = document.getElementById("botonArriba");
+        window.onscroll = function() {
+            scroll();
+        };
+    
+        function scroll() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+    
+        function subir() {
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
 <script>
         function botonCambia() {
             document.body.classList.toggle('oscuro-mode');
@@ -131,6 +155,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 
 <footer>
