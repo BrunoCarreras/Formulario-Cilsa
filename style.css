@@ -61,3 +61,41 @@ width: 300px;
 height: 500px;
 object-fit: cover;
 }
+
+.oscuro-mode {
+  background-color: #121212;
+  color: white;
+}
+.navbar-dark .navbar-nav .nav-link.oscuro-mode {
+  color: white;
+}
+
+
+body.oscuro-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.oscuro-mode .form-control, 
+body.oscuro-mode .card,
+body.oscuro-mode .btn,
+body.oscuro-mode .alert {
+  background-color: #333;
+  color: #e0e0e0;
+  border-color: #444;
+}
+
+body.oscuro-mode .form-control::placeholder, 
+body.oscuro-mode .invalid-feedback {
+  color: #e0e0e0;
+}
+
+body.oscuro-mode .btn-dark {
+  background-color: #444;
+  border-color: #555;
+}
+
+body.oscuro-mode .btn-secondary {
+  background-color: #666;
+  border-color: #777;
+}

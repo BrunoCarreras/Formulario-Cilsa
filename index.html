@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Personal Portfolio - Bootstrap 5</title>
+  <title>Personal portfolio</title>
   <meta charset="utf-8">
 
   <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
@@ -17,96 +17,92 @@
  
 </head>
 <body class="body">
-    <!-- Barra de Navegación -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Logo</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#home">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#profile">Perfil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Trabajos</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#contact">Contacto</a>
-                  </li>
-                </ul>
+<!-- Barra de Navegación -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-lg">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Logo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#home">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#profile">Perfil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#portfolio">Trabajos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contacto</a>
+                </li>
+            </ul>
+            <button onclick="subir()" id="botonArriba" title="Ir arriba" class="btn btn-secondary ms-3">↑</button>
+        </div>
+    </div>
+</nav>  
+<!-- Sección Inicio -->
+<section class="home py-5" id="home">
+<div class="container-lg">
+    <div class="row min-vh-100 align-items-center align-content-center">
+        <!-- Columna de Imagen -->
+        <div class="col-md-6 mt-5 mt-md-0">
+            <div class="home-img text-center">
+                <img src="img/profile.png" class="rounded-circle mw-100" alt=""Un collage de iconos relacionados con la accesibilidad, incluyendo un botón pulsado, una flor, un ícono de cerebro, un ícono de accesibilidad universal, un oído, manos en lenguaje de señas, y un ícono de reproducción de video. El texto 'ALT TEXT' se muestra en un globo de diálogo amarillo.">
             </div>
         </div>
-    </nav>
-    
-    <!-- Sección Inicio -->
- <!-- Sección Inicio -->
- <section class="home py-5" id="home">
-  <div class="container-lg">
-      <div class="row min-vh-100 align-items-center align-content-center">
-          <!-- Columna de Imagen -->
-          <div class="col-md-6 mt-5 mt-md-0">
-              <div class="home-img text-center">
-                  <img src="img/profile.png" class="rounded-circle mw-100" alt=""Un collage de iconos relacionados con la accesibilidad, incluyendo un botón pulsado, una flor, un ícono de cerebro, un ícono de accesibilidad universal, un oído, manos en lenguaje de señas, y un ícono de reproducción de video. El texto 'ALT TEXT' se muestra en un globo de diálogo amarillo.">
-              </div>
-          </div>
-          <!-- Columna de Texto -->
-          <div class="col-md-6 mt-5 mt-md-0 order-md-first">
-            <div class="home-text">
-                <p class="text-muted mb-1">Bienvenido a</p>
-                <h1 class="text-danger text-uppercase fs-1 fw-bold">Accesibilidad Web Pro</h1>
-                <h2 class="fs-4">Mejora la Inclusividad de tu Sitio Web</h2>
-                <p class="mt-4 text-muted">En Accesibilidad Web Pro, nos especializamos en hacer que tu sitio web sea accesible para todos, incluyendo personas con discapacidades. Nuestro equipo de expertos se asegura de que cumpla con las mejores prácticas y estándares internacionales.</p>
-                <a href="#services" class="btn btn-danger px-3 mt-3">Nuestros Servicios</a>
-            </div>
+        <!-- Columna de Texto -->
+        <div class="col-md-6 mt-5 mt-md-0 order-md-first">
+        <div class="home-text">
+            <p class="text-muted mb-1">Bienvenido a</p>
+            <h1 class="text-danger text-uppercase fs-1 fw-bold">Accesibilidad Web Pro</h1>
+            <h2 class="fs-4">Mejora la Inclusividad de tu Sitio Web</h2>
+            <p class="mt-4 text-muted">En Accesibilidad Web Pro, nos especializamos en hacer que tu sitio web sea accesible para todos, incluyendo personas con discapacidades. Nuestro equipo de expertos se asegura de que cumpla con las mejores prácticas y estándares internacionales.</p>
+            <a href="#contact" class="btn btn-danger px-3 mt-3">Contáctanos</a>
         </div>
-  </div>
-</section>
+    </div>
+</div>
+</section>   
+<!-- Sección Perfil -->
 
-    
-    <!-- Sección Perfil -->
-    <section class="py-5" id="profile">
-        <div class="container-lg">
-            <div class="container-lg py-4">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="section-title text-center">
-                            <h2 class="fw-bold mb-5">Perfiles</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-md-6 col-lg-4 mb-4">
-                        <div class="card h-100">
-                            <img src="img/foto1.png" class="card-img-top" alt="Ilustración de una persona trabajando en una computadora con una taza de café y libros en su escritorio.">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Bruno</h5>
-                                <p class="card-text flex-grow-1">Hola!, mi nombre es Bruno. Soy una persona proactiva, dispuesta a aprender y mejorar mis habilidades. Tengo conocimiento sobre HTML5, CSS3, JS, Bootstrap y Diseño UX.</p>
-                                <a href="#" class="btn btn-dark mt-auto">Mi LinkedIn</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 mb-4">
-                        <div class="card h-100">
-                            <img src="img/foto2.avif" class="card-img-top" alt="Persona con gafas trabajando en una computadora, concentrado en la pantalla.">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Alejandra</h5>
-                                <p class="card-text flex-grow-1">Hola!, mi nombre es Alejandra.
-                                    Soy una persona proactiva, dispuesta a aprender y mejorar mis habilidades
-                                    tengo conocimiento sobre HTML5, CSS3, JS, Boostrap y Diseño UX.</p>
-                                <a href="#" class="btn btn-dark mt-auto">Mi LinkedIn</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<section class="py-5" id="profile">
+    <div class="container-lg">
+      <div class="container-lg py-4">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="section-title text-center">
+              <h2 class="fw-bold mb-5">Perfiles</h2>
             </div>
+          </div>
         </div>
-    </section>
-    
+        <div class="row justify-content-center">
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100">
+              <img src="img/foto1.png" class="card-img-top" alt="Ilustración de una persona trabajando en una computadora con una taza de café y libros en su escritorio.">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Bruno</h5>
+                <p class="card-text flex-grow-1">Hola!, mi nombre es Bruno. Soy una persona proactiva, dispuesta a aprender y mejorar mis habilidades. Tengo conocimiento sobre HTML5, CSS3, JS, Bootstrap y Diseño UX.</p>
+                <a href="#" class="btn btn-dark mt-auto">Mi LinkedIn</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100">
+              <img src="img/foto2.avif" class="card-img-top" alt="Persona con gafas trabajando en una computadora, concentrado en la pantalla.">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Alejandra</h5>
+                <p class="card-text flex-grow-1">Hola!, mi nombre es Alejandra. Soy una persona proactiva, dispuesta a aprender y mejorar mis habilidades. Tengo conocimiento sobre HTML5, CSS3, JS, Bootstrap y Diseño UX.</p>
+                <a href="#" class="btn btn-dark mt-auto">Mi LinkedIn</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Sección portfolio -->  
 <section class="py-5" id="portfolio">
   <div class="container-lg">
     <div class="section-title text-center mb-4">
@@ -138,103 +134,100 @@
     </div>
   </div>
 </section>
-
-
-
-    <!-- Sección Contacto -->
-    <section class="py-5" id="contact ">
-        <div class="container-lg form-container">
-            <form id="formulario" class="needs-validation">
-                <h1 class="text-center mb-4">¡Contáctanos!</h1>
-                <div class="mb-3">
-                    <label for="nombre">Nombre <span class="text-danger">*</span></label>
-                    <input type="text" id="nombre" class="form-control" placeholder="Ingresa tu nombre">
-                    <div class="invalid-feedback">
-                        Por favor, ingresa tu nombre.
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <label for="apellido">Apellido <span class="text-danger">*</span></label>
-                    <input type="text" id="apellido" class="form-control" placeholder="Ingresa tu apellido">
-                    <div class="invalid-feedback">
-                        Por favor, ingresa tu apellido.
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <label for="email">Email <span class="text-danger">*</span></label>
-                    <input type="email" id="email" class="form-control" placeholder="Ingresa tu Email">
-                    <div class="invalid-feedback">
-                        Por favor, ingresa un email válido.
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <label for="mensaje">Mensaje <span class="text-danger">*</span></label>
-                    <textarea id="mensaje" class="form-control" rows="3" placeholder="Escribe tu mensaje"></textarea>
-                    <div class="invalid-feedback">
-                        Por favor, ingresa tu mensaje.
-                    </div>
-                </div>
-                <button type="submit" class="btn btn-dark mt-3">Enviar</button>
-                <div id="successMessage" class="alert alert-success mt-3" role="alert">
-                    ¡Tu mensaje ha sido enviado con éxito!
-                </div>
-            </form>
-            <button class="btn btn-secondary mt-3" onclick="botonCambia()">Cambiar Modo Sensible</button>
+<!-- Sección Contacto -->
+<section class="py-5" id="contact">
+    <div class="container-lg form-container">
+      <form id="formulario" class="needs-validation">
+        <h1 class="text-center mb-4">¡Contáctanos!</h1>
+        <div class="mb-3">
+          <label for="nombre">Nombre <span class="text-danger">*</span></label>
+          <input type="text" id="nombre" class="form-control" placeholder="Ingresa tu nombre">
+          <div class="invalid-feedback">
+            Por favor, ingresa tu nombre.
+          </div>
         </div>
-    </section>
-    
-    <button onclick="subir()" id="botonArriba" title="Ir arriba" class="btn btn-secondary">↑</button>
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        var mybutton = document.getElementById("botonArriba");
-        window.onscroll = function() {
-            scroll();
-        };
-
-        function scroll() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                mybutton.style.display = "block";
-            } else {
-                mybutton.style.display = "none";
-            }
+        <div class="mb-3">
+          <label for="apellido">Apellido <span class="text-danger">*</span></label>
+          <input type="text" id="apellido" class="form-control" placeholder="Ingresa tu apellido">
+          <div class="invalid-feedback">
+            Por favor, ingresa tu apellido.
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="email">Email <span class="text-danger">*</span></label>
+          <input type="email" id="email" class="form-control" placeholder="Ingresa tu Email">
+          <div class="invalid-feedback">
+            Por favor, ingresa un email válido.
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="mensaje">Mensaje <span class="text-danger">*</span></label>
+          <textarea id="mensaje" class="form-control" rows="3" placeholder="Escribe tu mensaje"></textarea>
+          <div class="invalid-feedback">
+            Por favor, ingresa tu mensaje.
+          </div>
+        </div>
+        <button type="submit" class="btn btn-dark mt-3">Enviar</button>
+        <div id="successMessage" class="alert alert-success mt-3" role="alert">
+          ¡Tu mensaje ha sido enviado con éxito!
+        </div>
+      </form>
+      <button class="btn btn-secondary mt-3" onclick="botonCambia()">Cambio de contraste</button>
+    </div>
+  </section>
+  
+  <button onclick="subir()" id="botonArriba" title="Ir arriba" class="btn btn-secondary">↑</button>
+  
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    var mybutton = document.getElementById("botonArriba");
+    window.onscroll = function() {
+      scroll();
+    };
+  
+    function scroll() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+  
+    function subir() {
+      document.documentElement.scrollTop = 0;
+    }
+  
+    function botonCambia() {
+      document.body.classList.toggle('oscuro-mode');
+    }
+  
+    document.getElementById('formulario').addEventListener('submit', function(event) {
+      event.preventDefault();
+      var form = event.target;
+      var inputs = form.querySelectorAll('input, textarea');
+      var valid = true;
+  
+      inputs.forEach(function(input) {
+        if (!input.value.trim()) {
+          input.classList.add('is-invalid');
+          input.nextElementSibling.style.display = 'block';
+          valid = false;
+        } else {
+          input.classList.remove('is-invalid');
+          input.nextElementSibling.style.display = 'none';
         }
-
-        function subir() {
-            document.documentElement.scrollTop = 0;
-        }
-
-        function botonCambia() {
-            document.body.classList.toggle('oscuro-mode');
-        }
-
-        document.getElementById('formulario').addEventListener('submit', function(event) {
-            event.preventDefault(); 
-            var form = event.target;
-            var inputs = form.querySelectorAll('input, textarea');
-            var valid = true;
-
-            inputs.forEach(function(input) {
-                if (!input.value.trim()) {
-                    input.classList.add('is-invalid');
-                    input.nextElementSibling.style.display = 'block';
-                    valid = false;
-                } else {
-                    input.classList.remove('is-invalid');
-                    input.nextElementSibling.style.display = 'none';
-                }
-            });
-
-            if (valid) {
-                document.getElementById('successMessage').style.display = 'block';
-                form.reset(); 
-            } else {
-                alert('Por favor, complete todos los campos requeridos.');
-                document.getElementById('successMessage').style.display = 'none';
-            }
-        });
-    </script>
+      });
+  
+      if (valid) {
+        document.getElementById('successMessage').style.display = 'block';
+        form.reset();
+      } else {
+        alert('Por favor, complete todos los campos requeridos.');
+        document.getElementById('successMessage').style.display = 'none';
+      }
+    });
+  </script>
 
 
   
